@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas to MNIST</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://i.ibb.co/vCBZt41M/10477524.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <img class="header_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0VsSR7eTVzNtY4fDrvIbcxlUoFsSm-Vj31g&s"/>
+    </header>
+	<main>
+	<!-- Canvas -->
+    	<canvas id="draw" width="300" height="300"></canvas>
+		
+		<section id="buttonAndResult">
+			<div id="buttons">
+				<button id="clear" onclick="clearCanvas()">Clear</button>
+				<button id="reset" onclick="reset()">Reset</button>
+			</div>
+			<div id="result">
+				
+			</div>
+		</section>
+    	<div id="sample"></div>
+	</main>
+    <!-- Storing  image samples-->
+
+  <pre>
+    Draw a digit between 0 and 9 above and then the CNN model predicts your hand-drawn number. 
+    A neural network will predict your digit in the blue square above. 
+    Your image is 784 pixels (= 28 rows by 28 columns with black=1 and white=0). 
+    Those 784 features get fed into a 5 layer neural network; Input:784 - MaxPool:32 - MaxPool:64 - AvgPool:128 - Dense:128 - Dense:10 - Output. 
+    The net has 111,370 parameters and was trained on 60,000 images from the MNIST Dataset.
+    It achieves 98.2% accuracy on test-set of 10,000 images.
+    Click "Clear" to clear the canvas. Click "Reset" to clear your history of images.
+
+    Your images get added to your history showing above to the right. 
+    <!-- Each row is a digit with 784 pixels representing a 28x28 image (rows first). 
+    If you download with labels, then each row begins with the label. 
+    Assign true labels by clicking images in your history above and then clicking the correct keyboard key number. -->
+    
+    
+
+  </pre>
+  </body>
+  <script src="script.js"></script>
+</html>

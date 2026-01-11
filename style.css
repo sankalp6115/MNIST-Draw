@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f2f2;
+  color: #222;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header_img {
+  height: 40px;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+/* LEFT: canvas always stays fixed size */
+canvas {
+  width: 300px;
+  height: 300px;
+  background: black;
+  border: 2px solid #333;
+  border-radius: 6px;
+  cursor: crosshair;
+  flex-shrink: 0;   /* prevents it from resizing */
+}
+
+/* MIDDLE: buttons + result */
+#buttonAndResult {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 160px;
+}
+
+#buttons {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  background: #ffffff;
+  border: 1px solid #333;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background: #eaeaea;
+}
+
+/* result box */
+#result {
+  border: 1px solid #333;
+  padding: 10px;
+  background: #8ae0ff;
+  border-radius: 4px;
+}
+
+.prediction {
+  font-size: 46px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.confidence {
+  font-size: 13px;
+  color: #555;
+}
+
+/* RIGHT: sample images */
+#sample {
+  flex: 1;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+#sample img {
+  width: 48px;
+  height: 96px;
+  margin: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#sample img:hover {
+  border-color: #333;
+}
