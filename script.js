@@ -128,7 +128,7 @@ const canvas = document.getElementById("draw");
         const imageData = downscaleTo28x28();
         const pixels = imageDataToMNIST(imageData);
 	    // console.log(pixels);
-        const response = await fetch("/predict", {
+        const response = await fetch("http://127.0.0.1:5000/predict", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
