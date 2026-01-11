@@ -1,2 +1,4 @@
 keras
 numpy
+flask
+flask-cors

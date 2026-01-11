@@ -17,7 +17,7 @@ def predict():
     X = np.array(pixels, dtype=np.float32).reshape(1, 28, 28, 1)
 
     raw = model.predict(X)
-    probs = softmax(raw, axis=1).numpy()[0]
+    # probs = softmax(raw, axis=1).numpy()[0]
 
     return jsonify({
         "prediction": int(np.argmax(raw)),
